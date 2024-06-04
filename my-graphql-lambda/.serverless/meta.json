@@ -1,0 +1,126 @@
+{
+  "/home/bio-datta/myapp/my-graphql-lambda": {
+    "versionSfCore": null,
+    "versionFramework": "4.0.34",
+    "isWithinCompose": false,
+    "composeOrgName": null,
+    "servicePath": "/home/bio-datta/myapp/my-graphql-lambda",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "my-graphql-lambda",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs20.x",
+        "stage": "dev",
+        "region": "us-east-1",
+        "versionFunctions": true
+      },
+      "functions": {
+        "queryHandler": {
+          "handler": "handler.queryHandler",
+          "events": [
+            {
+              "http": {
+                "path": "query",
+                "method": "post"
+              }
+            }
+          ],
+          "name": "my-graphql-lambda-dev-queryHandler"
+        },
+        "mutationHandler": {
+          "handler": "handler.mutationHandler",
+          "events": [
+            {
+              "http": {
+                "path": "mutation",
+                "method": "post"
+              }
+            }
+          ],
+          "name": "my-graphql-lambda-dev-mutationHandler"
+        },
+        "subscriptionHandler": {
+          "handler": "handler.subscriptionHandler",
+          "events": [
+            {
+              "http": {
+                "path": "subscription",
+                "method": "post"
+              }
+            }
+          ],
+          "name": "my-graphql-lambda-dev-subscriptionHandler"
+        }
+      }
+    },
+    "serviceRawFile": "service: my-graphql-lambda\nprovider:\n  name: aws\n  runtime: nodejs20.x\nfunctions:\n  queryHandler:\n    handler: handler.queryHandler\n    events:\n      - http:\n          path: query\n          method: post\n  mutationHandler:\n    handler: handler.mutationHandler\n    events:\n      - http:\n          path: mutation\n          method: post\n  subscriptionHandler:\n    handler: handler.subscriptionHandler\n    events:\n      - http:\n          path: subscription\n          method: post\n",
+    "command": [
+      "logs"
+    ],
+    "options": {
+      "function": "my-graphql-lambda-dev-queryHandler"
+    },
+    "error": {
+      "message": "Function \"my-graphql-lambda-dev-queryHandler\" doesn't exist in this Service",
+      "stack": "ServerlessError3: Function \"my-graphql-lambda-dev-queryHandler\" doesn't exist in this Service\n    at Service.getFunction (file:///home/bio-datta/.serverless/releases/4.0.34/package/dist/sf-core.js:1036:12970)\n    at AwsLogs.extendedValidate (file:///home/bio-datta/.serverless/releases/4.0.34/package/dist/sf-core.js:862:3061)\n    at logs:logs (file:///home/bio-datta/.serverless/releases/4.0.34/package/dist/sf-core.js:862:2884)\n    at PluginManager.runHooks (file:///home/bio-datta/.serverless/releases/4.0.34/package/dist/sf-core.js:1035:9296)\n    at PluginManager.invoke (file:///home/bio-datta/.serverless/releases/4.0.34/package/dist/sf-core.js:1035:10067)\n    at async PluginManager.run (file:///home/bio-datta/.serverless/releases/4.0.34/package/dist/sf-core.js:1035:10779)\n    at async Serverless.run (file:///home/bio-datta/.serverless/releases/4.0.34/package/dist/sf-core.js:1042:10443)\n    at async runFramework (file:///home/bio-datta/.serverless/releases/4.0.34/package/dist/sf-core.js:1065:3103)\n    at async route (file:///home/bio-datta/.serverless/releases/4.0.34/package/dist/sf-core.js:1068:3074)\n    at async Object.run2 [as run] (file:///home/bio-datta/.serverless/releases/4.0.34/package/dist/sf-core.js:1068:4620)\n    at async Object.handler (file:///home/bio-datta/.serverless/releases/4.0.34/package/dist/sf-core.js:1068:9181)",
+      "code": "FUNCTION_MISSING_IN_SERVICE"
+    },
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "507c4568-b49c-495f-80b6-b8895fea79a9",
+    "orgName": "biobitcot",
+    "userId": "MBCW4FCkrhBkjK1tXf",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "biobitcot",
+    "subscription": null,
+    "userEmail": "mordatta@gmail.com",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "975049987984",
+    "versionSf": "4.0.34",
+    "serviceProviderAwsCfStackName": "my-graphql-lambda-dev",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:975049987984:stack/my-graphql-lambda-dev/86643bd0-2179-11ef-a770-12e04129f4cf",
+    "serviceProviderAwsCfStackCreated": "2024-06-03T07:18:50.215Z",
+    "serviceProviderAwsCfStackUpdated": "2024-06-04T11:41:44.247Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "SubscriptionHandlerLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-1:975049987984:function:my-graphql-lambda-dev-subscriptionHandler:2",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-my-graphql-lambda-dev-SubscriptionHandlerLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "QueryHandlerLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-1:975049987984:function:my-graphql-lambda-dev-queryHandler:3",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-my-graphql-lambda-dev-QueryHandlerLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "MutationHandlerLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-1:975049987984:function:my-graphql-lambda-dev-mutationHandler:2",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-my-graphql-lambda-dev-MutationHandlerLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "ServiceEndpoint",
+        "OutputValue": "https://wzddat3ctc.execute-api.us-east-1.amazonaws.com/dev",
+        "Description": "URL of the service endpoint",
+        "ExportName": "sls-my-graphql-lambda-dev-ServiceEndpoint"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "my-graphql-lambda-dev-serverlessdeploymentbucket-m1egwxnchbul",
+        "ExportName": "sls-my-graphql-lambda-dev-ServerlessDeploymentBucketName"
+      }
+    ]
+  }
+}
